@@ -1,0 +1,34 @@
+class human(object):
+    """游戏角色基础属性"""
+
+    def __init__(self,name,sex,age,bat_eff):
+        self.name=name
+        self.sex=sex
+        self.age=age
+        self.bat_eff=bat_eff
+       # self.value=value
+
+    def __str__(self):
+        return '<角色姓名: %s(性别：%s,年龄：%s 初始战力:%s)>' %(self.name,self.sex,self.age,self.bat_eff)
+
+
+    def exe(self):
+        print('学习python走火入魔进入超风模式加1000战力')
+        print('上课走神减弱100战力')
+        print(self.bat_eff)
+
+    def exe1(self):
+        print("挑衅纯子战力加500")
+        print("莫名其妙被诅咒自废武功")
+        print("偶遇覃大师指导战力飙升至8900")
+        print(self.bat_eff)
+
+
+if __name__ == '__main__':
+    bob = human('小鹿纯子','女性','年方二八','初始战力:1000,最终战力：1900')
+    print(bob)
+    bob.exe()
+
+    stone=human('南宫问天','第三性别','9900岁','初始战力:-1000,最终战力:8900')
+    print(stone)
+    stone.exe1()
